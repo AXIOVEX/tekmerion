@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-10-20
+
 These entries record the red-team remediation (Spec 013). An adversarial
 review of the first release found ways to make the record say things
 that were not true; each entry below names what was wrong in plain
