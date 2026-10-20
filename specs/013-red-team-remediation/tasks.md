@@ -125,4 +125,9 @@ Integration & records
       2026-10-20 (platform ledgers have no enrolled ledger-signing
       key; trusted mode there awaits a key-custody decision) +
       re-assessment of the unchanged bundle; CHANGELOG [Unreleased].*
+      — *Amendment 2026-10-20: T40's CLM-013-25 exception is closed by
+      owner ruling — the claim text is amended to the shipped two-class
+      rule (bundle v0.2.1) rather than the implementation extended;
+      CLM-013-25 re-assessed at 1.000 / supported, no claim below
+      threshold; see amendment-2026-10-20-clm-013-25.md.*
 - [ ] T41 Commit, push, PR (no merge — coordinator's).

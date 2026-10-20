@@ -116,3 +116,14 @@ recorded. Closing this qualification requires a key-custody design
 (generation, storage across restarts, rotation) adopted as a Spec 005
 decision; until then, trusted-mode verification at the platform layer
 remains the one named gap in this package's record.
+
+---
+
+*Addendum (2026-10-20): the CLM-013-25 wording item named above is
+closed. By owner ruling the same day, Spec 013 amended the claim's
+text to state this package's shipped two-class rule rather than
+extending the implementation; CLM-013-25 was re-assessed at 1.000 /
+supported on the amended text, and the episode is recorded in
+`specs/013-red-team-remediation/amendment-2026-10-20-clm-013-25.md`.
+CLM-005-29 was never qualified by the item and is unchanged; the
+key-custody qualification above stands as written.*

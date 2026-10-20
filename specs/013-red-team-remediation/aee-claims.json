@@ -1,5 +1,5 @@
 {
- "build_note": "2026-10-20 after-implement update (T40): all remediation workstreams are merged (tekmerion main f472ccb; PRs #34-#43) and the acceptance battery has been re-run (battery-compat-report-2026-10-20.md). Claims CLM-013-01...24 and CLM-013-26...47 are moved to supported / checked on the shipped regression tests named in each claim's evidence and on the battery: 57 demonstrated attacks re-run - 56 fail outright, one (RTB-11, a truncated ledger prefix) is contained by the expected-head pin and documented as a bare-verification property, 0 succeed; every held defense re-checked still holds; the full suite is 570 passed, 3 skipped. CLM-013-25 is NOT moved: its text requires every SPRS evidence link to resolve, and the shipped rule enforces resolution for platform-form links while organisation references are recorded as operator-attested by design - both readings are in its evidence and it stays draft, pending a decision on the claim text. Stage is checked throughout (the program's own tests and battery; this record explains and accepts nothing). The platform layer's trusted-mode residual - platform ledgers have no enrolled ledger-signing key, so trusted verification there awaits a key-custody decision - is recorded in specs/005-enterprise-platform/qualification-note-2026-10-20-spec-013-t40.md; it sits outside these claims' texts (see CLM-013-15's boundary).",
+ "build_note": "2026-10-20 amendment (CLM-013-25, bundle v0.2.1): the owner ruled to amend CLM-013-25's text to the shipped two-class rule rather than extend the implementation. The claim text now states that rule; its former contradicts evidence entry is annotated and reclassified in place (the episode is preserved in amendment-2026-10-20-clm-013-25.md); its falsifier now tests the amended text. No implementation or test changed. The externally anchored aee-assessment-after-implement.json stands unchanged as the record of the pre-amendment bundle; the amended bundle is re-assessed in aee-assessment-after-implement-2026-10-20-clm-013-25-amendment.json. Prior note (T40, bundle v0.2.0): 2026-10-20 after-implement update (T40): all remediation workstreams are merged (tekmerion main f472ccb; PRs #34-#43) and the acceptance battery has been re-run (battery-compat-report-2026-10-20.md). Claims CLM-013-01...24 and CLM-013-26...47 are moved to supported / checked on the shipped regression tests named in each claim's evidence and on the battery: 57 demonstrated attacks re-run - 56 fail outright, one (RTB-11, a truncated ledger prefix) is contained by the expected-head pin and documented as a bare-verification property, 0 succeed; every held defense re-checked still holds; the full suite is 570 passed, 3 skipped. CLM-013-25 is NOT moved: its text requires every SPRS evidence link to resolve, and the shipped rule enforces resolution for platform-form links while organisation references are recorded as operator-attested by design - both readings are in its evidence and it stays draft, pending a decision on the claim text. Stage is checked throughout (the program's own tests and battery; this record explains and accepts nothing). The platform layer's trusted-mode residual - platform ledgers have no enrolled ledger-signing key, so trusted verification there awaits a key-custody decision - is recorded in specs/005-enterprise-platform/qualification-note-2026-10-20-spec-013-t40.md; it sits outside these claims' texts (see CLM-013-15's boundary).",
  "claims": [
   {
    "boundary": [
@@ -1093,21 +1093,28 @@
      "source_quality": "primary"
     },
     {
-     "direction": "contradicts",
+     "direction": "supports",
      "kind": "observed",
-     "ref": "specs/013-red-team-remediation/battery-compat-report-2026-10-20.md \u00a7Residuals (CLM-013-25 wording vs implementation): organisation references - the evidence class an operator most often supplies - are NOT resolution-checked; the platform records and reports them as operator-attested. The claim text's universal reading (each evidence link must resolve) is therefore not met for that class; the two-class rule is the designed behavior recorded in Spec 005's qualification note of 2026-10-13. Measured, not asserted: battery probe p12 records org references as operator-attested with no resolution attempt.",
+     "ref": "specs/013-red-team-remediation/battery-compat-report-2026-10-20.md \u00a7Residuals (CLM-013-25 wording vs implementation): organisation references - the evidence class an operator most often supplies - are NOT resolution-checked; the platform records and reports them as operator-attested. The claim text's universal reading (each evidence link must resolve) is therefore not met for that class; the two-class rule is the designed behavior recorded in Spec 005's qualification note of 2026-10-13. Measured, not asserted: battery probe p12 records org references as operator-attested with no resolution attempt. Amendment record (2026-10-20): this entry was filed with direction \"contradicts\" and was accurate against the claim's pre-amendment text, which promised resolution for every link. On 2026-10-20 the owner ruled to amend the claim text to the two-class rule this entry describes rather than extend the implementation. Under the amended text the same measurement confirms the claim, so the entry is reclassified to \"supports\" with its original wording preserved above and the episode recorded in amendment-2026-10-20-clm-013-25.md; it is not deleted.",
+     "source_quality": "primary"
+    },
+    {
+     "direction": "supports",
+     "kind": "asserted",
+     "ref": "Owner decision 2026-10-20 and specs/013-red-team-remediation/amendment-2026-10-20-clm-013-25.md: the claim text was amended to state the shipped two-class rule (platform-record links must resolve; organisation references are operator-attested). The implementation and its tests are unchanged by the amendment (src/tekmerion/platform/compliance.py; tests/test_e7_redteam_platform.py::test_p12_sprs_evidence_links_must_resolve).",
      "source_quality": "primary"
     }
    ],
    "falsification_tests": [
-    "F-013-25: Re-run rt-c/probes/p12_sprs_shaping.py. Falsified if the score still moves from the seeded value (-156) toward a positive value (+110 in the probe) purely by operator assertion with non-resolving links, with checks silent."
+    "F-013-25: Re-run rt-c/probes/p12_sprs_shaping.py and the battery supplements p12c/p12d. Falsified if any of these hold: the score moves from the seeded value (-156) toward a positive value purely by operator assertion; assertion prose is accepted as an evidence link; a platform-form link whose target does not exist in the scope is accepted when the state is written, or one whose target stops resolving is not named as a failure in the computed report; or an organisation reference is reported as resolved rather than operator-attested."
    ],
    "id": "CLM-013-25",
    "kind": "requirement",
+   "lifecycle_stage": "checked",
    "severity": "medium",
    "source_ref": "specs/013-red-team-remediation/spec.md",
-   "status": "draft",
-   "text": "SPRS self-assessment input validation requires each evidence link to resolve: the referenced target must exist and identify as claimed (hash or identity match). A well-formed but non-resolving link fails validation, so the computed self-score cannot be moved by operator assertion alone.",
+   "status": "supported",
+   "text": "SPRS self-assessment input validation treats evidence links by class. A link that names a platform record \u2014 a POA&M item, an audit export, or a legal hold recorded in the same scope, or an anchor into a document the platform maintains \u2014 must resolve: the named target must exist, and a document anchor must name the very requirement the link is offered as evidence for. A link that does not resolve is refused when the state is written, and one whose target later stops resolving is a named failure in the computed report. Any other single-token reference is the organisation's own evidence: it is recorded and reported as operator-attested, labelled as such wherever it is reported, and never represented as resolved. A value that is prose rather than a reference is refused, so the computed self-score cannot be moved by operator assertion alone.",
    "uncertainty": "medium"
   },
   {
@@ -2037,5 +2044,5 @@
  ],
  "date": "2026-10-20",
  "spec": "013-red-team-remediation",
- "version": "0.2.0"
+ "version": "0.2.1"
 }

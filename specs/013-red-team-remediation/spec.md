@@ -171,6 +171,15 @@ cannot fail is not verification (Article VI).
   checks validate that an evidence link **resolves** — the target exists and
   identifies (hash/identity) as claimed — not merely that it is well-formed.
   The self-score stops being movable by assertion alone.
+  — *Amendment (2026-10-20): the sentence above stands as the after-specify
+  text. What shipped is the two-class rule recorded in Spec 005's
+  qualification note: links claiming platform records are
+  resolution-checked as described, and organisation references are
+  recorded and reported as operator-attested, never as resolved. By the
+  owner's ruling of 2026-10-20, CLM-013-25's text was amended to state
+  that rule exactly; the governing text is the amended claim in
+  `aee-claims.json` v0.2.1, and the episode is recorded in
+  `amendment-2026-10-20-clm-013-25.md`.*
 - **`create_tenant` refuses duplicates (CLM-013-26, answers p16; closes the
   E5-recorded item, cf. RTD-10).** Re-creating an existing tenant id is refused
   at the service layer; a tenant's residency pin, CUI marking, and policy can

@@ -20,6 +20,33 @@
     }
    },
    "note": "External anchor for this spec's claim bundle and assessments (red-team follow-up RTE-23, WS-7 records round 2, 2026-10-20). Held back from the 2026-10-13 anchoring round until the after-build assessment existed. The deposit's description carries the same SHA-256 values; any copy of these files can be checked against either record."
+  },
+  {
+   "mechanism": "zenodo",
+   "recorded_at": "2026-10-20",
+   "doi": "10.5281/zenodo.23495583",
+   "conceptdoi": "10.5281/zenodo.23489994",
+   "record_id": 23495583,
+   "locator": "https://doi.org/10.5281/zenodo.23495583",
+   "bundle_version": "0.2.1",
+   "files": {
+    "aee-assessment-after-implement-2026-10-20-clm-013-25-amendment.json": {
+     "sha256": "0a763092a49a0abdbeae76a32997fbfc510da364cd7bba49d36ea8a0dfe7a026"
+    },
+    "aee-assessment-after-implement.json": {
+     "sha256": "fba9b06819ab7f03f8bde135c737b44a62b1c9c5bc0682347660589ad31c999b"
+    },
+    "aee-assessment.json": {
+     "sha256": "e51875a1627deecdbf3c14ad7fa14f51546488afe8b44acb8c4309ca930d7ebe"
+    },
+    "aee-claims.json": {
+     "sha256": "80640f9d6bd6f95e2ec14436eb014117d367abe9a20bfef38777e6c0110e32a1"
+    },
+    "amendment-2026-10-20-clm-013-25.md": {
+     "sha256": "cefef115ba76063aac8f4088e14b24564db3359e3ce5a546a5401a03549241d1"
+    }
+   },
+   "note": "Version 2 of the Spec 013 anchor (2026-10-20): carries the amended claim bundle v0.2.1 (CLM-013-25 text amended by owner ruling to state the shipped two-class SPRS evidence-link rule), its re-assessment, the amendment note, and the two earlier assessments unchanged. Version 1 (10.5281/zenodo.23489995) anchors the pre-amendment bundle and stands as published. The deposit's description carries the same SHA-256 values."
   }
  ]
 }
