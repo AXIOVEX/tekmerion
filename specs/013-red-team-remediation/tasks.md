@@ -113,7 +113,16 @@ Integration & records
 - [x] T39 Backward-compatibility measurement over the frozen + deposited
       set, Spec 011-style, BEFORE merge (CLM-013-46). Console conformance
       captures re-run; BUILD_ID identity asserted; no wireframe delta.
-- [ ] T40 Records: after_implement re-assessment + dated assessment in
+- [x] T40 Records: after_implement re-assessment + dated assessment in
       this package; dated qualification note + affected-claim
       re-assessment in specs/005-enterprise-platform/; CHANGELOG entry.
+      — *Done 2026-10-20: claims v0.2.0 (46 of 47 supported / checked;
+      CLM-013-25 stays draft — its text promises every SPRS link
+      resolves, the shipped rule resolves platform-form links and
+      labels organisation references operator-attested; scored 0.250
+      with the contradiction in its evidence, see
+      assessment-2026-10-20.md); Spec 005 qualification note
+      2026-10-20 (platform ledgers have no enrolled ledger-signing
+      key; trusted mode there awaits a key-custody decision) +
+      re-assessment of the unchanged bundle; CHANGELOG [Unreleased].*
 - [ ] T41 Commit, push, PR (no merge — coordinator's).
