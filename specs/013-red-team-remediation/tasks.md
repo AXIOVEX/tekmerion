@@ -107,10 +107,10 @@ WS-5 — MCP & UI surfaces (Lane E; inherits T9/T10/T19–T21 gates)
       explicitly (CLM-013-35).
 
 Integration & records
-- [ ] T38 Battery re-run: every in-scope DEMONSTRATED attack fails; every
+- [x] T38 Battery re-run: every in-scope DEMONSTRATED attack fails; every
       HELD defense still holds (incl. rt-c SAML/OIDC/SCIM batteries, rt-d
       role matrix); full repo suite green (CLM-013-47).
-- [ ] T39 Backward-compatibility measurement over the frozen + deposited
+- [x] T39 Backward-compatibility measurement over the frozen + deposited
       set, Spec 011-style, BEFORE merge (CLM-013-46). Console conformance
       captures re-run; BUILD_ID identity asserted; no wireframe delta.
 - [ ] T40 Records: after_implement re-assessment + dated assessment in
