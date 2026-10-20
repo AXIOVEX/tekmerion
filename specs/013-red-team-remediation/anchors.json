@@ -1,0 +1,25 @@
+{
+ "anchors": [
+  {
+   "mechanism": "zenodo",
+   "recorded_at": "2026-10-20",
+   "doi": "10.5281/zenodo.23489995",
+   "conceptdoi": "10.5281/zenodo.23489994",
+   "record_id": 23489995,
+   "locator": "https://doi.org/10.5281/zenodo.23489995",
+   "bundle_version": "0.2.0",
+   "files": {
+    "aee-assessment-after-implement.json": {
+     "sha256": "fba9b06819ab7f03f8bde135c737b44a62b1c9c5bc0682347660589ad31c999b"
+    },
+    "aee-assessment.json": {
+     "sha256": "e51875a1627deecdbf3c14ad7fa14f51546488afe8b44acb8c4309ca930d7ebe"
+    },
+    "aee-claims.json": {
+     "sha256": "ec2f1ac23a7b2a6a93d1f43f94808088cecc178e7859b6e3f4eb82c31160f0f4"
+    }
+   },
+   "note": "External anchor for this spec's claim bundle and assessments (red-team follow-up RTE-23, WS-7 records round 2, 2026-10-20). Held back from the 2026-10-13 anchoring round until the after-build assessment existed. The deposit's description carries the same SHA-256 values; any copy of these files can be checked against either record."
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "anchors": [
+  {
+   "mechanism": "zenodo",
+   "recorded_at": "2026-10-20",
+   "doi": "10.5281/zenodo.23489991",
+   "conceptdoi": "10.5281/zenodo.23489990",
+   "record_id": 23489991,
+   "locator": "https://doi.org/10.5281/zenodo.23489991",
+   "bundle_version": "0.8.0",
+   "files": {
+    "aee-assessment-2026-10-20-qualification.json": {
+     "sha256": "ccb9b7218b1761fb63e4547bf8c3ddd22f461b8d63302d7a658b0ceb54713915"
+    },
+    "aee-assessment.json": {
+     "sha256": "170e8411342753f2162b5a1e12992ae90d1ba82ab85bc528a924558346bc47d9"
+    },
+    "aee-claims.json": {
+     "sha256": "56e920b5ad90a58b81ba71bff7155996d6564e5a50be1403f2efa0d5e1846913"
+    },
+    "qualification-note-2026-10-20-spec-013-t40.md": {
+     "sha256": "cae94b573192df2b239190a009d3e20719fbeaf11a4b02d17385a4aaeec36cc1"
+    }
+   },
+   "note": "External anchor for this spec's claim bundle and assessments, including the 2026-10-20 qualification note (red-team follow-up RTE-23, WS-7 records round 2, 2026-10-20). Held back from the 2026-10-13 anchoring round until the qualification note was written. The deposit's description carries the same SHA-256 values; any copy of these files can be checked against either record."
+  }
+ ]
+}
