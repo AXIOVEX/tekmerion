@@ -1,0 +1,2 @@
+[console_scripts]
+tekmerion-mcp = tekmerion.mcp.server:main

@@ -1,0 +1,12 @@
+Metadata-Version: 2.4
+Name: tekmerion
+Version: 0.1.0
+Summary: Tekmerion — defensible AI research: append-only, hash-chained research records with per-claim verdicts.
+License: All rights reserved. (c) 2026 Axiovex Systems, LLC
+Requires-Python: >=3.12
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: pytest>=8; extra == "dev"
+Provides-Extra: mcp
+Requires-Dist: mcp<3,>=2; extra == "mcp"
+Dynamic: license-file
